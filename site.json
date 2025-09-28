@@ -1,0 +1,42 @@
+{
+  "sites": [
+    {
+      "name": "Google",
+      "url": "https://www.google.com",
+      "type": "https",
+      "timeout": 10
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com",
+      "type": "https",
+      "timeout": 10
+    },
+    {
+      "name": "Baidu",
+      "url": "https://www.baidu.com",
+      "type": "https", 
+      "timeout": 10
+    },
+    {
+      "name": "Local HTTP Test",
+      "url": "http://httpbin.org/status/200",
+      "type": "http",
+      "timeout": 15
+    },
+    {
+      "name": "DNS Test - Cloudflare",
+      "url": "1.1.1.1",
+      "type": "tcp",
+      "port": 53,
+      "timeout": 5
+    },
+    {
+      "name": "HTTPS Port Test - Google",
+      "url": "www.google.com",
+      "type": "tcp",
+      "port": 443,
+      "timeout": 10
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+ROSTemplateFormatVersion: '2015-09-01'
+Transform: 'Aliyun::Serverless-2018-04-03'
+Resources:
+  fc-uptime-bot:
+    Type: 'Aliyun::Serverless::Service'
+    Properties:
+      Description: 'Uptime monitoring service'
+    fc-uptime-function:
+      Type: 'Aliyun::Serverless::Function'
+      Properties:
+        Description: 'Monitor website uptime and push results to GitHub'
+        CodeUri: './'
+        Handler: 'index.handler'
+        Runtime: python3.9
+        Timeout: 300
+        MemorySize: 512
+        EnvironmentVariables: {}
+      Events:
+        Timer:
+          Type: Timer
+          Properties:
+            CronExpression: '0 */5 * * * *'  # Every 5 minutes
+            Enable: true
+        HttpTrigger:
+          Type: Http
+          Properties:
+            AuthType: ANONYMOUS
+            Methods: ['GET', 'POST']

@@ -1,0 +1,50 @@
+{
+  "sites": [
+    {
+      "name": "主站点",
+      "url": "https://www.example.com",
+      "type": "https",
+      "timeout": 10
+    },
+    {
+      "name": "API接口",
+      "url": "https://api.example.com/health",
+      "type": "https",
+      "timeout": 15
+    },
+    {
+      "name": "CDN服务",
+      "url": "https://cdn.example.com",
+      "type": "https",
+      "timeout": 10
+    },
+    {
+      "name": "数据库端口检测",
+      "url": "db.example.com",
+      "type": "tcp",
+      "port": 3306,
+      "timeout": 5
+    },
+    {
+      "name": "Redis缓存检测",
+      "url": "192.168.1.100",
+      "type": "tcp", 
+      "port": 6379,
+      "timeout": 5
+    },
+    {
+      "name": "SSH服务检测",
+      "url": "server.example.com",
+      "type": "tcp",
+      "port": 22,
+      "timeout": 5
+    },
+    {
+      "name": "HTTPS端口检测",
+      "url": "secure.example.com",
+      "type": "tcp",
+      "port": 443,
+      "timeout": 10
+    }
+  ]
+}

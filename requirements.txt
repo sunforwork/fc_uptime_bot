@@ -1,0 +1,10 @@
+# No external dependencies required - using standard library only
+# All functionality implemented using built-in Python modules:
+# - json: JSON handling
+# - time: Time operations 
+# - socket: TCP connectivity checks
+# - ssl: HTTPS support
+# - urllib: HTTP requests
+# - datetime: Timestamp generation
+# - base64: GitHub API content encoding
+# - os: Environment variables (optional)
